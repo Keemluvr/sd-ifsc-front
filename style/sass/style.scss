@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+
+$white-color: #FFFFFF;
+$gray-color: #555;
+$green-color: #E5E5E5;
+$green-secondary-color: #0F5F5C;
+$green-thirdy-color: #32A041;
+
+$poppins-font: "Poppins", sans-serif;
+
+
+body {
+    background-color: $green-color;
+}
+
+nav {
+    background-color: $white-color;
+    margin-left: 450px;
+    height: 7vh;
+    width: calc(100vw - 435px);
+}
+.sidebar {
+    background-color: $white-color;
+    height: 100vh;
+    width: 450px;
+    border-right: 0.5px solid $green-color;
+
+    .logotipo {
+        min-height: 15vh;
+        border-bottom: 0.5px solid $green-color;
+        img {
+            max-height: 6.5vh;
+        }
+    }
+
+    .menu-dashboard {
+        width: 450px;
+        .item:hover {
+            color: $green-thirdy-color;
+        }
+        .active {
+            color: $green-thirdy-color;
+        }
+    }
+
+    p {
+        padding: 15px 0;
+        font-size: 21px;
+        font-family: "poppins", sans-serif;
+        font-weight: 400;
+        color: $gray-color;
+    }
+}
