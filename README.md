@@ -13,7 +13,7 @@
 >- Javascript
 >- Axios
 
-## [Preview](https://keemluvr.github.io/cardapio-ifsc-front/)
+## [Preview](https://sd-ifsc-front.now.sh)
 
 ## API's consumidas
 
