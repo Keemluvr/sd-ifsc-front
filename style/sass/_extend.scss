@@ -1,0 +1,11 @@
+@import 'variables';
+
+%background{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    padding: 20px 50px;
+    background-color: $white-color;
+    border-radius: 7px;
+    width: 69.4vw;
+}
