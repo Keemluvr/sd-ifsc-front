@@ -20,5 +20,5 @@
 >:curry: [Cardápio IFSC](https://github.com/Keemluvr/cardapio-ifsc)
 >   - Cesar e Keila
 
->:clipboard: [Projetos de pesquisa IFSC]()
+>:clipboard: [Projetos de pesquisa IFSC](https://github.com/wilsonfcj/projeto-ifsc-sd)
 >   - Iara e Wilson
