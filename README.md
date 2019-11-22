@@ -1,18 +1,11 @@
 <h1 align="center">
-  Cardápio IFSC (Front-end)
+  SD (Front-end)
 </h1>
 <p align="center">
-  <img src="https://image.flaticon.com/icons/svg/926/926255.svg" width="150">
+  <img src="https://www.ifsc.edu.br/image/layout_set_logo?img_id=902745&t=1574366878652" width="250">
 </p>
 
 ## Tecnologias usadas
->[Back-end](https://github.com/Keemluvr/cardapio-ifsc)
->- Spring
->   - Spring Boot
->- Swagger
->- Heroku
->- PostgreSQL
-
 >[Front-end](https://github.com/Keemluvr/cardapio-ifsc-front)
 >- HTML
 >- CSS
@@ -21,3 +14,11 @@
 >- Axios
 
 ## [Preview](https://keemluvr.github.io/cardapio-ifsc-front/)
+
+## API's consumidas
+
+>:curry: [Cardápio IFSC](https://github.com/Keemluvr/cardapio-ifsc)
+>   - Cesar e Keila
+
+>:clipboard: [Projetos de pesquisa IFSC]()
+>   - Iara e Wilson
