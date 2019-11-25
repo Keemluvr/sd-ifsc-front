@@ -11,7 +11,7 @@
 
 <body>
     <!-- sass style/sass/style.scss style/css/style.css --watch -->
-
+    <!-- sass --watch style/sass/style.scss:style/css/style.css -->
     <div class="sidebar">
         <nav></nav>
 
@@ -68,8 +68,13 @@
             <hr>
             <p id="pratoSete" class="item">- saladas</p>
         </div>
-        <div class="cadastro mostrar">
-
+        <div class="cardapio cadastro esconder">
+            <p class="titulo">Cadastrar almoço</p>
+            <div class="card-input">
+                <label for="cardNumber" class="card-input__label">1º Prato</label>
+                <input type="text" id="cardDish" class="card-input__input" v-on:focus="focusInput"
+                    v-on:blur="blurInput" autocomplete="on">
+            </div>
         </div>
     </div>
 

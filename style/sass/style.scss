@@ -5,6 +5,7 @@
 
 @import 'sidebar';
 @import 'cardapio';
+@import 'cadastro_cardapio';
 
 body {
     margin: 0px 0px 0px 0px !important;
@@ -14,9 +15,9 @@ body {
 
 nav {
     background-color: $white-color;
-    margin-left: 18.2vw;
+    margin-left: 18.16vw;
     height: 7vh;
-    width: calc(100vw - 18.2vw);
+    width: calc(100vw - 18.16vw);
     position: absolute;
 }
 
@@ -33,12 +34,19 @@ nav {
     .button {
         padding: 40px;
         background-color: $white-color;
-        border: 1px solid $white-color;
+        border: 0px solid $white-color;
         border-radius: 7px;
         display: flex;
         justify-content: center;
         margin: 0 40px 0 0;
         font-size: $normal-font;
+    }
+
+    .button:hover {
+        color: $white-color;
+        background-color: $green-thirdy-color;
+        box-shadow: 0 0 1em $green-thirdy-color;
+        cursor: pointer;
     }
 }
 
@@ -58,7 +66,4 @@ nav {
         visibility: visible;
     }
 
-    
-
-    
 }
