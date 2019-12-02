@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- CSS -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.0/build/css/alertify.min.css" />
+    <!-- Default theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.0/build/css/themes/default.min.css" />
+    <link rel="stylesheet" href="style/style.css">
+
+    <link rel="shortcut icon" href="assets/icons/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon">
+    <title>Cardápio IFSC | Câmpus Lages</title>
+</head>
+
+<body>
+    <section id="grid">
+        <header></header>
+
+        <!-- sidebar -->
+        <nav>
+            <div id="logo">
+                <img src="assets/images/IFSC_horizontal_marca2015_PNG.png" alt="">
+            </div>
+            <div class="pages">
+                <a href="index.html">Dashboard</a>
+                <a href="cardapio.html" class="selected">Cardápio</a>
+                <a href="projetos.html">Projetos</a>
+                <a href="estacionamento.html">Estacionamento</a>
+            </div>
+        </nav>
+        <!-- end sidebar -->
+
+        <!-- conteudo -->
+        <main>
+
+            <!-- botões de escolha -->
+            <div id="buttons">
+                <div id="register" class="btn" onclick="showRegister()">Cadastrar cardápio</div>
+                <div id="edit" class="btn" onclick="showEdit()">Editar cardápio</div>
+                <div id="delete" class="btn" onclick="showDelete()">Deletar cardápio</div>
+                <div id="search" class="btn" onclick="showSearch()">Procurar cardápio</div>
+            </div>
+            <!-- end botões de escolha -->
+
+            <div class="chose-button">
+
+                <!-- cardápio do dia  -->
+                <div id="today-menu">
+                </div>
+                <!-- end cardápio do dia -->
+
+                <!-- cadastro do cardápio -->
+                <div id="register-menu">
+                    <p class="title">Cadastrar almoço</p>
+                    <label>Data do almoço *</label>
+                    <input type="date" id="inputDate" autocomplete="on">
+
+                    <label>1º Prato *</label>
+                    <input type="text" id="inputDishOne" autocomplete="on">
+
+                    <label>2º Prato *</label>
+                    <input type="text" id="inputDishTwo" autocomplete="on">
+
+                    <label>3º Prato *</label>
+                    <input type="text" id="inputDishThree" autocomplete="on">
+
+                    <label>4º Prato *</label>
+                    <input type="text" id="inputDishFour" autocomplete="on">
+
+                    <label>5º Prato *</label>
+                    <input type="text" id="inputDishFive" autocomplete="on">
+
+                    <label>6º Prato *</label>
+                    <input type="text" id="inputDishSix" autocomplete="on">
+
+                    <label>7º Prato</label>
+                    <input type="text" id="inputDishSeven" autocomplete="on">
+
+                    <input type="button" id="button-submit-register" value="Cadastrar cardápio" class="btn-submit"
+                        onclick="submitRegister()">
+                </div>
+                <!-- end cadastro do cardápio -->
+
+                <!-- editar cardápio -->
+                <div id="edit-menu">
+                    <p class="title">Editar cardápio</p>
+                    <label>Dia do cardápio que deseja modificar *</label>
+                    <div class="informationFind">
+                        <input type="text" id="inputEdit" autocomplete="on">
+                        <input type="button" value="Procurar cardápio" class="btn-submit">
+                    </div>
+                    <label class="notice"><span>Observação</span>: Só é possível editar cardápios do mês
+                        atual.</label>
+
+                    <p class="title">Edite os valores abaixo</p>
+                    <label>Data do almoço *</label>
+                    <input type="date" id="inputDateEdit" autocomplete="on">
+
+                    <label>1º Prato *</label>
+                    <input type="text" id="inputDishOneEdit" autocomplete="on">
+
+                    <label>2º Prato *</label>
+                    <input type="text" id="inputDishTwoEdit" autocomplete="on">
+
+                    <label>3º Prato *</label>
+                    <input type="text" id="inputDishThreeEdit" autocomplete="on">
+
+                    <label>4º Prato *</label>
+                    <input type="text" id="inputDishFourEdit" autocomplete="on">
+
+                    <label>5º Prato *</label>
+                    <input type="text" id="inputDishFiveEdit" autocomplete="on">
+
+                    <label>6º Prato *</label>
+                    <input type="text" id="inputDishSixEdit" autocomplete="on">
+
+                    <label>7º Prato</label>
+                    <input type="text" id="inputDishSevenEdit" autocomplete="on">
+
+                    <input type="button" id="button-submit-edit" value="Cadastrar cardápio" class="btn-submit">
+                </div>
+                <!-- end editar cardápio -->
+
+                <!-- deletar cardápio -->
+                <div id="delete-menu">
+                    <p class="title">Deletar cardápio</p>
+                    <label>Dia do cardápio que deseja deletar *</label>
+                    <div class="informationFind">
+                        <input type="text" id="inputEdit" autocomplete="on">
+                        <input type="button" value="Deletar cardápio" class="btn-submit">
+                    </div>
+                    <label class="notice"><span>Observação</span>: Só é possível deletar cardápios do mês
+                        atual.</label>
+                </div>
+                <!-- end deletar cardápio -->
+
+                <!-- procurar cardápio -->
+                <div id="find-menu">
+
+                    <p class="title">Procurar cardápio</p>
+                    <label>Dia do cardápio que deseja procurar *</label>
+                    <div class="informationFind">
+                        <input type="text" id="inputEdit" autocomplete="on">
+                        <input type="button" value="Procurar cardápio" class="btn-submit">
+                    </div>
+                    <label class="notice"><span>Observação</span>: Só é possível procurar cardápios do mês
+                        atual.</label>
+
+                    <p class="date">22/12/2019</p>
+                    <p class="title">Almoço</p>
+                    <p id="dishOne" class="item">- Arroz</p>
+                    <hr>
+                    <p id="dishTwo" class="item">- feijão</p>
+                    <hr>
+                    <p id="dishThree" class="item">- macarrão</p>
+                    <hr>
+                    <p id="dishFour" class="item">- cebola</p>
+                    <hr>
+                    <p id="dishFive" class="item">- pão</p>
+                    <hr>
+                    <p id="dishSix" class="item">- tomate</p>
+                    <hr>
+                    <p id="dishSeven" class="item">- saladas</p>
+                    <!-- end procurar cardápio -->
+
+                </div>
+                <!-- end procurar cardápio -->
+            </div>
+
+        </main>
+        <!-- conteudo -->
+
+    </section>
+
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.0/build/alertify.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/cardapio.js"></script>
+
+</body>
+
+</html>

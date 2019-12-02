@@ -1,0 +1,349 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+/* Cores */
+/* Fontes */
+/* Tamanhos */
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+/* Cores */
+/* Fontes */
+/* Tamanhos */
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+#grid > main #buttons .btn:hover, #grid > main #buttons .btn-selected, #grid > main .chose-button input[type=button]:hover {
+  color: #FFFFFF;
+  background-color: #32A041;
+  -webkit-box-shadow: 0 0 1em #32A041;
+          box-shadow: 0 0 1em #32A041;
+  cursor: pointer;
+}
+
+#register-menu .title, #edit-menu .title, #delete-menu .title, #find-menu .title, #today-menu .title {
+  text-align: center;
+  font-size: 23px;
+  color: #32A041;
+}
+
+#register-menu, #edit-menu, #delete-menu, #find-menu, #today-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  margin: 0px 4vw;
+  padding: 0px 2.5vw;
+  background-color: #FFFFFF;
+  border-radius: 7px;
+  overflow-y: auto;
+}
+
+#register-menu .informationFind, #edit-menu .informationFind, #delete-menu .informationFind, #find-menu .informationFind {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+#register-menu .informationFind input[type=text], #edit-menu .informationFind input[type=text], #delete-menu .informationFind input[type=text], #find-menu .informationFind input[type=text] {
+  -webkit-box-flex: 10;
+      -ms-flex-positive: 10;
+          flex-grow: 10;
+}
+
+#register-menu .informationFind input[type=button], #edit-menu .informationFind input[type=button], #delete-menu .informationFind input[type=button], #find-menu .informationFind input[type=button] {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin: 0px 0px 0px 8px !important;
+  height: 43px;
+  padding: 0px !important;
+}
+
+#today-menu hr, #find-menu hr {
+  border: none;
+  border-top: 2px dotted #555;
+  color: #fff;
+  background-color: #fff;
+  height: 1px;
+  width: 100%;
+  margin: 0px;
+}
+
+/* Cores */
+/* Fontes */
+/* Tamanhos */
+/* Cores */
+/* Fontes */
+/* Tamanhos */
+#grid > main #buttons .btn:hover, #grid > main #buttons .btn-selected, #grid > main .chose-button input[type=button]:hover {
+  color: #FFFFFF;
+  background-color: #32A041;
+  -webkit-box-shadow: 0 0 1em #32A041;
+          box-shadow: 0 0 1em #32A041;
+  cursor: pointer;
+}
+
+#register-menu .title, #edit-menu .title, #delete-menu .title, #find-menu .title, #today-menu .title {
+  text-align: center;
+  font-size: 23px;
+  color: #32A041;
+}
+
+#register-menu, #edit-menu, #delete-menu, #find-menu, #today-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  margin: 0px 4vw;
+  padding: 0px 2.5vw;
+  background-color: #FFFFFF;
+  border-radius: 7px;
+  overflow-y: auto;
+}
+
+#register-menu .informationFind, #edit-menu .informationFind, #delete-menu .informationFind, #find-menu .informationFind {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+#register-menu .informationFind input[type=text], #edit-menu .informationFind input[type=text], #delete-menu .informationFind input[type=text], #find-menu .informationFind input[type=text] {
+  -webkit-box-flex: 10;
+      -ms-flex-positive: 10;
+          flex-grow: 10;
+}
+
+#register-menu .informationFind input[type=button], #edit-menu .informationFind input[type=button], #delete-menu .informationFind input[type=button], #find-menu .informationFind input[type=button] {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin: 0px 0px 0px 8px !important;
+  height: 43px;
+  padding: 0px !important;
+}
+
+#today-menu hr, #find-menu hr {
+  border: none;
+  border-top: 2px dotted #555;
+  color: #fff;
+  background-color: #fff;
+  height: 1px;
+  width: 100%;
+  margin: 0px;
+}
+
+#today-menu {
+  font-size: 18px;
+}
+
+#today-menu .date {
+  text-align: center;
+  font-size: 18px;
+}
+
+#register-menu {
+  display: none;
+}
+
+#edit-menu {
+  display: none;
+}
+
+#delete-menu {
+  display: none;
+}
+
+#find-menu {
+  display: none;
+  font-size: 18px;
+}
+
+#find-menu .date {
+  text-align: center;
+  font-size: 18px;
+}
+
+body {
+  background-color: #E5E5E5;
+  margin: 0;
+}
+
+#grid {
+  overflow-y: hidden;
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+  height: 100vh;
+      grid-template-areas: "nav head" "nav  main";
+  -ms-grid-rows: 8vh 100vh 100vh;
+      grid-template-rows: 8vh 100vh 100vh;
+  -ms-grid-columns: 18vw 1fr;
+      grid-template-columns: 18vw 1fr;
+  font-family: "Poppins", sans-serif;
+  overflow-y: auto;
+}
+
+#grid > header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: head;
+  background-color: #FFFFFF;
+  border-left: 1px solid #E5E5E5;
+}
+
+#grid > nav {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: nav;
+  overflow-y: hidden;
+  background-color: #FFFFFF;
+}
+
+#grid > nav #logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 4vh 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-bottom: 1px solid #E5E5E5;
+}
+
+#grid > nav #logo img {
+  height: 3.5vw;
+  width: auto;
+}
+
+#grid > nav .pages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  margin: 0 2.3vw;
+}
+
+#grid > nav .pages a {
+  text-decoration: none;
+  padding: .7em 0;
+  font-size: 18px;
+  font-weight: 400;
+  color: #555;
+}
+
+#grid > nav .pages a:nth-child(1) {
+  padding-top: 2.3em;
+}
+
+#grid > nav .pages a:hover {
+  color: #32A041;
+}
+
+#grid > nav .pages .selected {
+  color: #32A041;
+}
+
+#grid > main {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: main;
+  background-color: #E5E5E5;
+}
+
+#grid > main #buttons {
+  margin: 0px 4vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#grid > main #buttons .btn {
+  background-color: #FFFFFF;
+  margin: 20px 0;
+  padding: 40px;
+  border-radius: 7px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #555;
+}
+
+#grid > main #buttons .btn-selected {
+  background-color: #32A041;
+  color: #FFFFFF;
+}
+
+#grid > main .chose-button input {
+  margin-bottom: 12px;
+  border-radius: 7px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: 1px solid #CED6E0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  font-size: 18px;
+  padding: 5px 15px;
+  background: none;
+  font-family: "Poppins", sans-serif, sans-serif;
+  outline: none;
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+}
+
+#grid > main .chose-button input[type=text], #grid > main .chose-button input[type=date] {
+  height: 30px;
+}
+
+#grid > main .chose-button input[type=button] {
+  text-decoration: none;
+  color: #FFFFFF;
+  background-color: #32A041;
+  padding: 15px 0px;
+  font-weight: 400;
+  margin: 15px 0px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-items: center;
+}
+
+#grid > main .chose-button input:hover, #grid > main .chose-button input[type=text]:focus {
+  border-color: #32A041;
+}
+
+#grid > main .chose-button .notice {
+  font-family: "Poppins", sans-serif, sans-serif;
+  font-size: 15px;
+  margin: 10px 0px;
+}
+
+#grid > main .chose-button .notice span {
+  color: #C8191E;
+  font-weight: 500;
+}
+/*# sourceMappingURL=style.css.map */

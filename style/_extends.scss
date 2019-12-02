@@ -1,0 +1,64 @@
+@import '_variables';
+
+%border-green {
+    color: $white-color;
+    background-color: $green-thirdy-color;
+    box-shadow: 0 0 1em $green-thirdy-color;
+    cursor: pointer;
+}
+
+%title {
+    text-align: center;
+    font-size: $large-font;
+    color: $green-thirdy-color;
+}
+
+%standard-column-content {
+    display: flex;
+    flex-flow: column wrap;
+    margin: 0px 4vw;
+    padding: 0px 2.5vw;
+    background-color: $white-color;
+    border-radius: 7px;
+    overflow-y: auto;
+}
+
+%input-find {
+    display: flex;
+    flex-flow: row wrap;
+
+    input[type=text] {
+        flex-grow: 10;
+    }
+
+    input[type=button] {
+        flex-grow: 1;
+        margin: 0px 0px 0px 8px !important;
+        height: 43px;
+        padding: 0px !important;
+    }
+}
+
+%model-form {
+    @extend %standard-column-content;
+
+    .title {
+        @extend %title;
+    }
+
+    .informationFind {
+        @extend %input-find;
+    }
+}
+
+%dotted-line {
+    hr {
+        border: none;
+        border-top: 2px dotted #555;
+        color: #fff;
+        background-color: #fff;
+        height: 1px;
+        width: 100%;
+        margin: 0px;
+    }
+}

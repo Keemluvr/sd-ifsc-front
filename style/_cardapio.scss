@@ -1,0 +1,45 @@
+@import '_variables';
+@import '_extends';
+
+#today-menu {
+    @extend %standard-column-content;
+    @extend %dotted-line;
+    font-size: $normal-font;
+
+    .date {
+        text-align: center;
+        font-size: $normal-font;
+    }
+
+    .title {
+        @extend %title;
+    }
+}
+
+#register-menu {
+    display: none;
+    @extend %model-form;
+}
+
+#edit-menu {
+    display: none;
+    @extend %model-form;
+}
+
+#delete-menu {
+    display: none;
+    @extend %model-form;
+}
+
+#find-menu {
+    display: none;
+    @extend %model-form;
+    @extend %dotted-line;
+    font-size: $normal-font;
+
+    .date {
+        text-align: center;
+        font-size: $normal-font;
+    }
+
+}
