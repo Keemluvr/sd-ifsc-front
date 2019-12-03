@@ -8,14 +8,6 @@
 /* Tamanhos */
 @import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
-#grid > main #buttons .btn:hover, #grid > main #buttons .btn-selected, #grid > main .chose-button input[type=button]:hover {
-  color: #FFFFFF;
-  background-color: #32A041;
-  -webkit-box-shadow: 0 0 1em #32A041;
-          box-shadow: 0 0 1em #32A041;
-  cursor: pointer;
-}
-
 #register-menu .title, #edit-menu .title, #delete-menu .title, #find-menu .title, #today-menu .title {
   text-align: center;
   font-size: 23px;
@@ -30,8 +22,8 @@
   -webkit-box-direction: normal;
       -ms-flex-flow: column wrap;
           flex-flow: column wrap;
-  margin: 0px 4vw;
-  padding: 0px 2.5vw;
+  margin: 0px 4vw 3vw 4vw;
+  padding: 0px 2.5vw 2vw 2.5vw;
   background-color: #FFFFFF;
   border-radius: 7px;
   overflow-y: auto;
@@ -78,14 +70,6 @@
 /* Cores */
 /* Fontes */
 /* Tamanhos */
-#grid > main #buttons .btn:hover, #grid > main #buttons .btn-selected, #grid > main .chose-button input[type=button]:hover {
-  color: #FFFFFF;
-  background-color: #32A041;
-  -webkit-box-shadow: 0 0 1em #32A041;
-          box-shadow: 0 0 1em #32A041;
-  cursor: pointer;
-}
-
 #register-menu .title, #edit-menu .title, #delete-menu .title, #find-menu .title, #today-menu .title {
   text-align: center;
   font-size: 23px;
@@ -100,8 +84,8 @@
   -webkit-box-direction: normal;
       -ms-flex-flow: column wrap;
           flex-flow: column wrap;
-  margin: 0px 4vw;
-  padding: 0px 2.5vw;
+  margin: 0px 4vw 3vw 4vw;
+  padding: 0px 2.5vw 2vw 2.5vw;
   background-color: #FFFFFF;
   border-radius: 7px;
   overflow-y: auto;
@@ -157,6 +141,44 @@
 
 #edit-menu {
   display: none;
+}
+
+#edit-menu #sub-edit {
+  display: contents !important;
+}
+
+#edit-menu #sub-edit .submits {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#edit-menu #sub-edit .submits input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+#edit-menu #sub-edit .submits input:nth-child(1) {
+  margin-right: 5px;
+}
+
+#edit-menu #sub-edit .submits .btn-cancel {
+  border: #C8191E;
+  color: #FFFFFF !important;
+  background-color: #C8191E !important;
+  cursor: pointer;
+}
+
+#edit-menu #sub-edit .submits .btn-cancel:hover {
+  -webkit-box-shadow: 0 0 1em #C8191E;
+          box-shadow: 0 0 1em #C8191E;
 }
 
 #delete-menu {
@@ -291,9 +313,22 @@ body {
   color: #555;
 }
 
-#grid > main #buttons .btn-selected {
+#grid > main #buttons .btn:hover {
   background-color: #32A041;
   color: #FFFFFF;
+  -webkit-box-shadow: 0 0 1em #32A041;
+          box-shadow: 0 0 1em #32A041;
+}
+
+#grid > main #buttons .btn-selected {
+  color: #FFFFFF !important;
+  background-color: #32A041 !important;
+  cursor: pointer;
+}
+
+#grid > main #buttons .btn-selected:hover {
+  -webkit-box-shadow: 0 0 1em #32A041;
+          box-shadow: 0 0 1em #32A041;
 }
 
 #grid > main .chose-button input {
@@ -320,9 +355,11 @@ body {
 }
 
 #grid > main .chose-button input[type=button] {
+  border: #32A041;
+  color: #FFFFFF !important;
+  background-color: #32A041 !important;
+  cursor: pointer;
   text-decoration: none;
-  color: #FFFFFF;
-  background-color: #32A041;
   padding: 15px 0px;
   font-weight: 400;
   margin: 15px 0px;
@@ -330,6 +367,11 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   justify-items: center;
+}
+
+#grid > main .chose-button input[type=button]:hover {
+  -webkit-box-shadow: 0 0 1em #32A041;
+          box-shadow: 0 0 1em #32A041;
 }
 
 #grid > main .chose-button input:hover, #grid > main .chose-button input[type=text]:focus {

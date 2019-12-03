@@ -1,5 +1,6 @@
 @import '_variables';
 @import '_extends';
+@import '_mixins';
 
 @import '_cardapio';
 
@@ -93,14 +94,20 @@ body {
             color: $gray-color;
 
             &:hover {
-                @extend %border-green;
+                background-color: $green-thirdy-color;
+                color: $white-color;
+                box-shadow: 0 0 1em $green-thirdy-color;
             }
         }
 
         .btn-selected {
-            background-color: $green-thirdy-color;
-            color: $white-color;
-            @extend %border-green;
+            color: $white-color !important;
+            background-color: $green-thirdy-color !important;
+            cursor: pointer;
+
+            &:hover {
+                box-shadow: 0 0 1em $green-thirdy-color;
+            }
         }
     }
 
@@ -128,18 +135,13 @@ body {
             }
 
             &[type=button] {
+                @include button-background-color-on($green-thirdy-color, $white-color);
                 text-decoration: none;
-                color: $white-color;
-                background-color: $green-thirdy-color;
                 padding: 15px 0px;
                 font-weight: 400;
                 margin: 15px 0px;
                 justify-content: center;
                 justify-items: center;
-
-                &:hover {
-                    @extend %border-green;
-                }
             }
 
             &:hover,
@@ -152,6 +154,7 @@ body {
             font-family: $poppins-font, sans-serif;
             font-size: $small-font;
             margin: 10px 0px;
+
             span {
                 color: $red-color;
                 font-weight: 500;

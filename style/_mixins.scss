@@ -1,0 +1,10 @@
+@mixin button-background-color-on($colorPrimary, $colorSecondary) {
+    border: $colorPrimary;
+    color: $colorSecondary !important;
+    background-color: $colorPrimary !important;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: 0 0 1em $colorPrimary;
+    }
+}

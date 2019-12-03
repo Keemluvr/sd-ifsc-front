@@ -1,11 +1,5 @@
 @import '_variables';
-
-%border-green {
-    color: $white-color;
-    background-color: $green-thirdy-color;
-    box-shadow: 0 0 1em $green-thirdy-color;
-    cursor: pointer;
-}
+@import '_mixins';
 
 %title {
     text-align: center;
@@ -16,8 +10,8 @@
 %standard-column-content {
     display: flex;
     flex-flow: column wrap;
-    margin: 0px 4vw;
-    padding: 0px 2.5vw;
+    margin: 0px 4vw 3vw 4vw;
+    padding: 0px 2.5vw 2vw 2.5vw;
     background-color: $white-color;
     border-radius: 7px;
     overflow-y: auto;

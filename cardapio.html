@@ -91,37 +91,13 @@
                     <label>Dia do cardápio que deseja modificar *</label>
                     <div class="informationFind">
                         <input type="text" id="inputEdit" autocomplete="on">
-                        <input type="button" value="Procurar cardápio" class="btn-submit">
+                        <input type="button" value="Procurar cardápio" class="btn-submit" onclick="putSearchFields()">
                     </div>
                     <label class="notice"><span>Observação</span>: Só é possível editar cardápios do mês
                         atual.</label>
 
-                    <p class="title">Edite os valores abaixo</p>
-                    <label>Data do almoço *</label>
-                    <input type="date" id="inputDateEdit" autocomplete="on">
-
-                    <label>1º Prato *</label>
-                    <input type="text" id="inputDishOneEdit" autocomplete="on">
-
-                    <label>2º Prato *</label>
-                    <input type="text" id="inputDishTwoEdit" autocomplete="on">
-
-                    <label>3º Prato *</label>
-                    <input type="text" id="inputDishThreeEdit" autocomplete="on">
-
-                    <label>4º Prato *</label>
-                    <input type="text" id="inputDishFourEdit" autocomplete="on">
-
-                    <label>5º Prato *</label>
-                    <input type="text" id="inputDishFiveEdit" autocomplete="on">
-
-                    <label>6º Prato *</label>
-                    <input type="text" id="inputDishSixEdit" autocomplete="on">
-
-                    <label>7º Prato</label>
-                    <input type="text" id="inputDishSevenEdit" autocomplete="on">
-
-                    <input type="button" id="button-submit-edit" value="Cadastrar cardápio" class="btn-submit">
+                    <div id="sub-edit">
+                    </div>
                 </div>
                 <!-- end editar cardápio -->
 

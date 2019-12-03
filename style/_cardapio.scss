@@ -24,6 +24,27 @@
 #edit-menu {
     display: none;
     @extend %model-form;
+
+    #sub-edit {
+        display: contents !important;
+
+        .submits {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+
+            input {
+                &:nth-child(1) {
+                    margin-right: 5px;
+                }
+                flex: 1;
+            }
+
+            .btn-cancel {
+                @include button-background-color-on($red-color, $white-color)
+            }
+        }
+    }
 }
 
 #delete-menu {
