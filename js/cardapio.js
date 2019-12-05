@@ -148,7 +148,7 @@ function putSearchFields() {
         });
 }
 // envai o cardápio editado
-function submitEdit(id,dia, mes, ano) {
+function submitEdit(id, dia, mes, ano) {
     let JSONCardapioEdit = {
         "id": `${id}`,
         "dia": `${dia}`,
@@ -190,12 +190,75 @@ function clearField() {
 // **************************************************** Deletar um cardápio ***************************************************
 // ****************************************************************************************************************************
 
-
+APICARDAPIO.get("/cardapios")
+    .then(function (response) {
+        // document.getElementById('delete-menu').innerHTML = `
+        //     <div id="cards">
+        //     </div>
+        // `
+        // for (i = 0; i < response.data.length; i++) {
+        //     // Sucesso
+        //     document.getElementById('cards').innerHTML += `
+        //         <div class="card">
+        //             <p class="">Almoço - ${response.data[i].dia}/${response.data[i].mes}/${response.data[i].ano}</p>
+        //             <p id="dishOne" class="item">- ${response.data[i].primeiroPrato}</p>
+        //             <p id="dishTwo" class="item">- ${response.data[i].segundoPrato}</p>
+        //             <p id="dishThree" class="item">- ${response.data[i].terceiroPrato}</p>
+        //             <p id="dishFour" class="item">- ${response.data[i].quartoPrato}</p>
+        //             <p id="dishFive" class="item">- ${response.data[i].quintoPrato}</p>
+        //             <p id="dishSix" class="item">- ${response.data[i].sextoPrato}</p>
+        //         </div>
+        //         `
+        //     if (response.data[i].setimoPrato != "") {
+        //         document.getElementById('cards').innerHTML += `
+        //             <p id="dishSeven" class="item">- ${response.data[i].setimoPrato}</p>
+        //         `
+        //     }
+        // }
+    })
+    .catch(function (error) {
+      
+    });
 
 // ****************************************************************************************************************************
 // ************************************************** Procurar um cardápio ****************************************************
 // ****************************************************************************************************************************
-
+APICARDAPIO.get("/cardapios")
+    .then(function (response) {
+        console.log(response)
+        for (i = 0; i < response.data.length; i++) {
+            // Sucesso
+            document.getElementById('list-menu').innerHTML += `
+                    <p class="date"></p>
+                    <p class="title">Almoço</p>
+                    <p id="dishOne" class="item">- ${response.data[i].primeiroPrato}</p>
+                    <hr>
+                    <p id="dishTwo" class="item">- ${response.data[i].segundoPrato}</p>
+                    <hr>
+                    <p id="dishThree" class="item">- ${response.data[i].terceiroPrato}</p>
+                    <hr>
+                    <p id="dishFour" class="item">- ${response.data[i].quartoPrato}</p>
+                    <hr>
+                    <p id="dishFive" class="item">- ${response.data[i].quintoPrato}</p>
+                    <hr>
+                    <p id="dishSix" class="item">- ${response.data[i].sextoPrato}</p>
+                    <hr>
+                `
+            if (response.data[i].setimoPrato != "") {
+                document.getElementById('list-menu').innerHTML += `
+                    <p id="dishSeven" class="item">- ${response.data[i].setimoPrato}</p>
+                    <hr>
+                `
+            }
+        }
+    })
+    .catch(function (error) {
+        console.error(error)
+        document.getElementById('list-menu').innerHTML += `
+            <p class="title">Erro: ${error}</p>
+            <p class="date"> Favor reiniciar a página ou aguardar a resposta do servidor! </p>
+        `
+    });
 
 
 // ****************************************************************************************************************************
@@ -207,12 +270,12 @@ function showRegister() {
     document.getElementById("register-menu").style.display = "flex";
     document.getElementById("edit-menu").style.display = "none";
     document.getElementById("delete-menu").style.display = "none";
-    document.getElementById("find-menu").style.display = "none";
+    document.getElementById("list-menu").style.display = "none";
     // Botões acionados
     document.getElementById("register").classList.add("btn-selected")
     document.getElementById("edit").classList.remove("btn-selected");
     document.getElementById("delete").classList.remove("btn-selected")
-    document.getElementById("search").classList.remove("btn-selected")
+    document.getElementById("list").classList.remove("btn-selected")
 }
 
 function showEdit() {
@@ -221,12 +284,12 @@ function showEdit() {
     document.getElementById("register-menu").style.display = "none";
     document.getElementById("edit-menu").style.display = "flex";
     document.getElementById("delete-menu").style.display = "none";
-    document.getElementById("find-menu").style.display = "none";
+    document.getElementById("list-menu").style.display = "none";
     // Botões acionados
     document.getElementById("register").classList.remove("btn-selected")
     document.getElementById("edit").classList.add("btn-selected");
     document.getElementById("delete").classList.remove("btn-selected")
-    document.getElementById("search").classList.remove("btn-selected")
+    document.getElementById("list").classList.remove("btn-selected")
 }
 
 function showDelete() {
@@ -235,24 +298,24 @@ function showDelete() {
     document.getElementById("register-menu").style.display = "none";
     document.getElementById("edit-menu").style.display = "none";
     document.getElementById("delete-menu").style.display = "flex";
-    document.getElementById("find-menu").style.display = "none";
+    document.getElementById("list-menu").style.display = "none";
     // Botões acionados
     document.getElementById("register").classList.remove("btn-selected")
     document.getElementById("edit").classList.remove("btn-selected");
     document.getElementById("delete").classList.add("btn-selected")
-    document.getElementById("search").classList.remove("btn-selected")
+    document.getElementById("list").classList.remove("btn-selected")
 }
 
-function showSearch() {
+function showList() {
     // Abrir conteúdo
     document.getElementById("today-menu").style.display = "none";
     document.getElementById("register-menu").style.display = "none";
     document.getElementById("edit-menu").style.display = "none";
     document.getElementById("delete-menu").style.display = "none";
-    document.getElementById("find-menu").style.display = "flex";
+    document.getElementById("list-menu").style.display = "block";
     // Botões acionados
     document.getElementById("register").classList.remove("btn-selected")
     document.getElementById("edit").classList.remove("btn-selected");
     document.getElementById("delete").classList.remove("btn-selected")
-    document.getElementById("search").classList.add("btn-selected")
+    document.getElementById("list").classList.add("btn-selected")
 }

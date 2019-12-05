@@ -16,11 +16,10 @@ body {
     height: 100vh;
     grid-template-areas: "nav head"
         "nav  main";
-    grid-template-rows: 8vh 100vh 100vh;
+    grid-template-rows: 8vh 92vh 100vh;
     grid-template-columns: 18vw 1fr;
     font-family: $poppins-font;
     overflow-y: auto;
-
 }
 
 #grid>header {
@@ -76,7 +75,9 @@ body {
 
 #grid>main {
     grid-area: main;
+    overflow: hidden;
     background-color: $green-color;
+    max-height: 92vh;
 
     #buttons {
         margin: 0px 4vw;

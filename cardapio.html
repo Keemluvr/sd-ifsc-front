@@ -42,7 +42,7 @@
                 <div id="register" class="btn" onclick="showRegister()">Cadastrar cardápio</div>
                 <div id="edit" class="btn" onclick="showEdit()">Editar cardápio</div>
                 <div id="delete" class="btn" onclick="showDelete()">Deletar cardápio</div>
-                <div id="search" class="btn" onclick="showSearch()">Procurar cardápio</div>
+                <div id="list" class="btn" onclick="showList()">Todos os cardápios</div>
             </div>
             <!-- end botões de escolha -->
 
@@ -103,48 +103,23 @@
 
                 <!-- deletar cardápio -->
                 <div id="delete-menu">
-                    <p class="title">Deletar cardápio</p>
-                    <label>Dia do cardápio que deseja deletar *</label>
+                    <p class="title">Cardápios</p>
                     <div class="informationFind">
                         <input type="text" id="inputEdit" autocomplete="on">
-                        <input type="button" value="Deletar cardápio" class="btn-submit">
+                        <input type="button" value="Procurar cardápio" class="btn-submit" onclick="putSearchFields()">
                     </div>
-                    <label class="notice"><span>Observação</span>: Só é possível deletar cardápios do mês
+                    <label class="notice"><span>Observação</span>: Só é possível editar cardápios do mês
                         atual.</label>
+
+                    <div id="sub-edit">
+                    </div>
                 </div>
                 <!-- end deletar cardápio -->
 
-                <!-- procurar cardápio -->
-                <div id="find-menu">
-
-                    <p class="title">Procurar cardápio</p>
-                    <label>Dia do cardápio que deseja procurar *</label>
-                    <div class="informationFind">
-                        <input type="text" id="inputEdit" autocomplete="on">
-                        <input type="button" value="Procurar cardápio" class="btn-submit">
-                    </div>
-                    <label class="notice"><span>Observação</span>: Só é possível procurar cardápios do mês
-                        atual.</label>
-
-                    <p class="date">22/12/2019</p>
-                    <p class="title">Almoço</p>
-                    <p id="dishOne" class="item">- Arroz</p>
-                    <hr>
-                    <p id="dishTwo" class="item">- feijão</p>
-                    <hr>
-                    <p id="dishThree" class="item">- macarrão</p>
-                    <hr>
-                    <p id="dishFour" class="item">- cebola</p>
-                    <hr>
-                    <p id="dishFive" class="item">- pão</p>
-                    <hr>
-                    <p id="dishSix" class="item">- tomate</p>
-                    <hr>
-                    <p id="dishSeven" class="item">- saladas</p>
-                    <!-- end procurar cardápio -->
-
+                <!-- listar cardápio -->
+                <div id="list-menu">
                 </div>
-                <!-- end procurar cardápio -->
+                <!-- end listar cardápio -->
             </div>
 
         </main>
