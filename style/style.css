@@ -184,28 +184,85 @@
 #delete-menu {
   display: none;
   font-size: 18px;
+  overflow-y: scroll;
   max-height: 70vh;
   margin-bottom: 0px;
 }
 
-#delete-menu .cards {
+#delete-menu #cards {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-#delete-menu .cards .card {
-  max-width: 10vw;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 100vw;
-          flex: 0 1 100vw;
-  padding-bottom: 20px;
-  -webkit-box-shadow: 0 25px 40px -14px rgba(0, 0, 0, 0.25);
-          box-shadow: 0 25px 40px -14px rgba(0, 0, 0, 0.25);
+#delete-menu #cards .card {
+  min-width: 29vw;
+  max-width: 31vw;
+  margin: 0px 40px 20px 0px;
+  padding: 0 0 0 20px;
+  -webkit-box-shadow: 0 0px 1.5px 0 #32A041;
+          box-shadow: 0 0px 1.5px 0 #32A041;
+}
+
+#delete-menu #cards .card .title-card {
+  font-size: 18px;
+  color: #32A041;
+}
+
+#delete-menu #cards .card .submits {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0 20px 0 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#delete-menu #cards .card .submits input[type="button"] {
+  padding: 11px 4vw;
+}
+
+#delete-menu #cards .card .submits #button-edit {
+  border: #32A041;
+  color: #FFFFFF !important;
+  background-color: #32A041 !important;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+#delete-menu #cards .card .submits #button-edit:hover {
+  -webkit-box-shadow: 0 0 1em #32A041;
+          box-shadow: 0 0 1em #32A041;
+}
+
+#delete-menu #cards .card .submits #button-cancel {
+  border: #C8191E;
+  color: #FFFFFF !important;
+  background-color: #C8191E !important;
+  cursor: pointer;
+}
+
+#delete-menu #cards .card .submits #button-cancel:hover {
+  -webkit-box-shadow: 0 0 1em #C8191E;
+          box-shadow: 0 0 1em #C8191E;
+}
+
+#delete-menu .date {
+  text-align: center;
+  font-size: 18px;
 }
 
 #list-menu {

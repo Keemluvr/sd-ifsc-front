@@ -53,23 +53,53 @@
     @extend %model-form;
     @extend %dotted-line;
     font-size: $normal-font;
+    overflow-y: scroll;
     max-height: 70vh;
     margin-bottom: 0px;
-    
 
-    .cards {
+    #cards {
         display: flex;
-        flex-flow: row wrap;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
         .card {
-            max-width: 10vw;
-            flex: 0 1 100vw;
-            padding-bottom: 20px;
-            box-shadow: 0 25px 40px -14px rgba(0, 0, 0, 0.25);
+            min-width: 29vw;
+            max-width: 31vw;
+            margin: 0px 40px 20px 0px;
+            padding: 0 0 0 20px;
+            box-shadow: 0 0px 1.5px 0 $green-thirdy-color;
+
+            .title-card {
+                font-size: $normal-font;
+                color: $green-thirdy-color;
+            }
+
+            .submits {
+                display: flex;
+                flex: 1;
+                padding: 0 20px 0 0;
+                justify-content: center;
+
+                input[type="button"] {
+                    padding: 11px 4vw;
+                }
+
+                #button-edit {
+                    @include button-background-color-on($green-thirdy-color, $white-color);
+                    margin-right: 20px;
+                }
+                #button-cancel {
+                    @include button-background-color-on($red-color, $white-color);
+                }
+            }
         }
     }
 
-
-
+    .date {
+        text-align: center;
+        font-size: $normal-font;
+    }
 
 }
 

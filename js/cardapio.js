@@ -89,13 +89,14 @@ function submitRegister() {
 // ****************************************************************************************************************************
 
 // procura o cardápio a ser editado
-function putSearchFields() {
-    let diaProcurado = document.getElementById('inputEdit').value
-    APICARDAPIO.get(`/cardapio/${diaProcurado}`)
+function putSearchFields(responseSearch) {
+    console.log(responseSearch)
+    APICARDAPIO.get(`/cardapio/${responseSearch}`)
         .then(function (response) {
+            console.log(response)
             // Sucesso
             if (response.data == "") {
-                alertify.error(`Cardápio do dia ${diaProcurado}/${dataAtual.getMonth()+1} ainda não cadastrado ou indisponível!`);
+                alertify.error(`Cardápio do dia ${responseSearch.dia}/${responseSearch.mes} não disponível para edição!`);
             } else {
                 let id = response.data.id
                 let dia = response.data.dia
@@ -127,7 +128,7 @@ function putSearchFields() {
                 <input type="text" id="inputDishSevenEdit" autocomplete="on">
 
                 <div class="submits">
-                    <input type="button" id="button-submit-edit" value="Reenviar" class="btn-submit" onclick="submitEdit(${id}, ${dia}, ${mes}, ${ano})">
+                    <input type="button" id="button-submit-edit" value="Reenviar" class="btn-submit" onclick="submitEdit(${responseSearch.id}, ${dia}, ${mes}, ${ano})">
                     <input type="button" id="button-cancel-edit" value="Cancelar" class="btn-cancel" onclick="clearField()">
                 </div>
             `
@@ -140,10 +141,12 @@ function putSearchFields() {
                 document.getElementById('inputDishSevenEdit').value = response.data.setimoPrato
             }
         }).catch(function (error) {
-            if (diaProcurado == "") {
+            console.log(error)
+
+            if (responseSearch.dia == "") {
                 alertify.error(`Campo do cardápio do dia está vazio!`);
             } else {
-                alertify.error(`Cardápio do dia ${diaProcurado}/${dataAtual.getMonth} ainda não cadastrado ou indisponível!`);
+                alertify.error(`Cardápio do dia ${responseSearch.dia}/${responseSearch.mes} ainda não cadastrado ou indisponível!`);
             }
         });
 }
@@ -162,7 +165,6 @@ function submitEdit(id, dia, mes, ano) {
         "sextoPrato": `${document.getElementById("inputDishSixEdit").value}`,
         "setimoPrato": `${document.getElementById("inputDishSevenEdit").value}`,
     }
-    console.log("Editado: " + JSONCardapioEdit);
     APICARDAPIO.put('/cardapio', JSONCardapioEdit)
         .then(function (response) {
             // Retira os campos
@@ -187,45 +189,47 @@ function clearField() {
 }
 
 // ****************************************************************************************************************************
-// **************************************************** Deletar um cardápio ***************************************************
+// **************************************************** Deletar e editar um cardápio ******************************************
 // ****************************************************************************************************************************
-
 APICARDAPIO.get("/cardapios")
     .then(function (response) {
-        // document.getElementById('delete-menu').innerHTML = `
-        //     <div id="cards">
-        //     </div>
-        // `
-        // for (i = 0; i < response.data.length; i++) {
-        //     // Sucesso
-        //     document.getElementById('cards').innerHTML += `
-        //         <div class="card">
-        //             <p class="">Almoço - ${response.data[i].dia}/${response.data[i].mes}/${response.data[i].ano}</p>
-        //             <p id="dishOne" class="item">- ${response.data[i].primeiroPrato}</p>
-        //             <p id="dishTwo" class="item">- ${response.data[i].segundoPrato}</p>
-        //             <p id="dishThree" class="item">- ${response.data[i].terceiroPrato}</p>
-        //             <p id="dishFour" class="item">- ${response.data[i].quartoPrato}</p>
-        //             <p id="dishFive" class="item">- ${response.data[i].quintoPrato}</p>
-        //             <p id="dishSix" class="item">- ${response.data[i].sextoPrato}</p>
-        //         </div>
-        //         `
-        //     if (response.data[i].setimoPrato != "") {
-        //         document.getElementById('cards').innerHTML += `
-        //             <p id="dishSeven" class="item">- ${response.data[i].setimoPrato}</p>
-        //         `
-        //     }
-        // }
+        for (i = 0; i < response.data.length; i++) {
+            // Sucesso
+            document.getElementById('cards').innerHTML += `
+                <div class="card">
+                    <p class="date"></p>
+                    <p class="title-card">Almoço</p>
+                    <p id="dishOne" class="item">- ${response.data[i].primeiroPrato}</p>
+                    <p id="dishTwo" class="item">- ${response.data[i].segundoPrato}</p>
+                    <p id="dishThree" class="item">- ${response.data[i].terceiroPrato}</p>
+                    <p id="dishFour" class="item">- ${response.data[i].quartoPrato}</p>
+                    <p id="dishFive" class="item">- ${response.data[i].quintoPrato}</p>
+                    <p id="dishSix" class="item">- ${response.data[i].sextoPrato}</p>
+                    <p id="dishSeven" class="item">- ${response.data[i].setimoPrato}</p>
+
+                    <div class="submits">
+                        <input type="button" id="button-edit" value="Editar" class="btn-submit" onclick="putSearchFields(${response.data[i]})">
+                        <input type="button" id="button-cancel" value="Excluir" class="btn-cancel" onclick="delete(${response.data[i].id})">
+                    </div>
+                </div> 
+           `
+           
+        }
     })
     .catch(function (error) {
-      
+        console.error(error)
+        document.getElementById('list-menu').innerHTML += `
+            <p class="title">Erro: ${error}</p>
+            <p class="date"> Favor reiniciar a página ou aguardar a resposta do servidor! </p>
+        `
     });
+
 
 // ****************************************************************************************************************************
 // ************************************************** Procurar um cardápio ****************************************************
 // ****************************************************************************************************************************
 APICARDAPIO.get("/cardapios")
     .then(function (response) {
-        console.log(response)
         for (i = 0; i < response.data.length; i++) {
             // Sucesso
             document.getElementById('list-menu').innerHTML += `
@@ -297,7 +301,7 @@ function showDelete() {
     document.getElementById("today-menu").style.display = "none";
     document.getElementById("register-menu").style.display = "none";
     document.getElementById("edit-menu").style.display = "none";
-    document.getElementById("delete-menu").style.display = "flex";
+    document.getElementById("delete-menu").style.display = "block";
     document.getElementById("list-menu").style.display = "none";
     // Botões acionados
     document.getElementById("register").classList.remove("btn-selected")
