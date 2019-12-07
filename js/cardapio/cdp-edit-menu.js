@@ -83,8 +83,7 @@ function submitEdit(id, dia, mes, ano) {
     }
     APICARDAPIO.put('/cardapio', JSONCardapioEdit)
         .then(function (response) {
-            // Retira os campos
-            clearField()
+            returnCardList() 
             alertify.success('Cardápio editado com sucesso!');
         })
         .catch(function (error) {
@@ -107,5 +106,5 @@ function clearField() {
 // Retorna para a visualização dos cards para modificar
 function returnCardList() {
     clearField()
-    showDelete()
+    showModify()
 }
