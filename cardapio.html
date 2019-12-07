@@ -39,9 +39,9 @@
 
             <!-- botões de escolha -->
             <div id="buttons">
+                <div id="menu-day" class="btn btn-selected" onclick="menuDay()">Cardápio do dia</div>
                 <div id="register" class="btn" onclick="showRegister()">Cadastrar cardápio</div>
-                <div id="edit" class="btn" onclick="showEdit()">Editar cardápio</div>
-                <div id="delete" class="btn" onclick="showDelete()">Deletar cardápio</div>
+                <div id="delete" class="btn" onclick="showModify()">Modificar cardápio</div>
                 <div id="list" class="btn" onclick="showList()">Todos os cardápios</div>
             </div>
             <!-- end botões de escolha -->
@@ -87,26 +87,17 @@
 
                 <!-- editar cardápio -->
                 <div id="edit-menu">
-                    <p class="title">Editar cardápio</p>
-                    <label>Dia do cardápio que deseja modificar *</label>
-                    <div class="informationFind">
-                        <input type="text" id="inputEdit" autocomplete="on">
-                        <input type="button" value="Procurar cardápio" class="btn-submit" onclick="putSearchFields()">
-                    </div>
-                    <label class="notice"><span>Observação</span>: Só é possível editar cardápios do mês
-                        atual.</label>
-
                     <div id="sub-edit">
                     </div>
                 </div>
                 <!-- end editar cardápio -->
 
-                <!-- deletar cardápio -->
-                <div id="delete-menu">
+                <!-- modificar cardápio -->
+                <div id="modify-menu">
                     <p class="title">Cardápios</p>
                     <div id="cards"></div>
                 </div>
-                <!-- end deletar cardápio -->
+                <!-- end modificar cardápio -->
 
                 <!-- listar cardápio -->
                 <div id="list-menu">
@@ -121,7 +112,19 @@
 
     <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.0/build/alertify.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="js/cardapio.js"></script>
+
+    <!-- routes and config -->
+    <script src="js/cardapio/cdp-config.js"></script>
+    <script src="js/cardapio/cdp-btn-routes.js"></script>
+
+    <!-- pages -->
+    <script src="js/cardapio/cdp-day-menu.js"></script>
+    <script src="js/cardapio/cdp-register-menu.js"></script>
+    <script src="js/cardapio/cdp-modify-menu.js"></script>
+    <script src="js/cardapio/cdp-delete-menu.js"></script>
+    <script src="js/cardapio/cdp-edit-menu.js"></script>
+    <script src="js/cardapio/cdp-list-menu.js"></script>
+    
 
 </body>
 

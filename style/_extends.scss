@@ -8,13 +8,14 @@
 }
 
 %standard-column-content {
-    display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
     margin: 0px 4vw 3vw 4vw;
     padding: 0px 2.5vw 2vw 2.5vw;
     background-color: $white-color;
     border-radius: 7px;
-    overflow-y: auto;
+    overflow-y: scroll;
+    max-height: 70vh;
+    margin-bottom: 0px;
 }
 
 %input-find {
@@ -43,6 +44,7 @@
     .informationFind {
         @extend %input-find;
     }
+
 }
 
 %dotted-line {

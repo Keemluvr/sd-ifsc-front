@@ -3,11 +3,14 @@
 @import '_mixins';
 
 @import '_cardapio';
+@import '_projetos';
 
 body {
     background-color: $green-color;
     margin: 0;
 }
+
+// 1253 x 
 
 #grid {
     overflow-y: hidden;
@@ -78,6 +81,7 @@ body {
     overflow: hidden;
     background-color: $green-color;
     max-height: 92vh;
+    overflow-y: auto;
 
     #buttons {
         margin: 0px 4vw;
@@ -93,6 +97,8 @@ body {
             font-size: $normal-font;
             font-weight: 400;
             color: $gray-color;
+            min-width: 180px !important;
+            text-align: center;
 
             &:hover {
                 background-color: $green-thirdy-color;
@@ -132,7 +138,7 @@ body {
 
             &[type=text],
             &[type=date] {
-                height: 30px;
+                min-height: 30px;
             }
 
             &[type=button] {

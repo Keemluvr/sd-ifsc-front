@@ -8,28 +8,29 @@
 /* Tamanhos */
 @import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
-#register-menu .title, #edit-menu .title, #delete-menu .title, #list-menu .title, #today-menu .title {
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+#register-menu .title, #edit-menu .title, #modify-menu .title, #list-menu .title, #today-menu .title {
   text-align: center;
   font-size: 23px;
   color: #32A041;
 }
 
-#register-menu, #edit-menu, #delete-menu, #list-menu, #today-menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+#register-menu, #edit-menu, #modify-menu, #list-menu, #today-menu, #situation-project {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
   margin: 0px 4vw 3vw 4vw;
   padding: 0px 2.5vw 2vw 2.5vw;
   background-color: #FFFFFF;
   border-radius: 7px;
-  overflow-y: auto;
+  overflow-y: scroll;
+  max-height: 70vh;
+  margin-bottom: 0px;
 }
 
-#register-menu .informationFind, #edit-menu .informationFind, #delete-menu .informationFind, #list-menu .informationFind {
+#register-menu .informationFind, #edit-menu .informationFind, #modify-menu .informationFind, #list-menu .informationFind {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -39,13 +40,13 @@
           flex-flow: row wrap;
 }
 
-#register-menu .informationFind input[type=text], #edit-menu .informationFind input[type=text], #delete-menu .informationFind input[type=text], #list-menu .informationFind input[type=text] {
+#register-menu .informationFind input[type=text], #edit-menu .informationFind input[type=text], #modify-menu .informationFind input[type=text], #list-menu .informationFind input[type=text] {
   -webkit-box-flex: 10;
       -ms-flex-positive: 10;
           flex-grow: 10;
 }
 
-#register-menu .informationFind input[type=button], #edit-menu .informationFind input[type=button], #delete-menu .informationFind input[type=button], #list-menu .informationFind input[type=button] {
+#register-menu .informationFind input[type=button], #edit-menu .informationFind input[type=button], #modify-menu .informationFind input[type=button], #list-menu .informationFind input[type=button] {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -54,7 +55,7 @@
   padding: 0px !important;
 }
 
-#today-menu hr, #delete-menu hr, #list-menu hr {
+#today-menu hr, #modify-menu hr, #list-menu hr {
   border: none;
   border-top: 2px dotted #555;
   color: #fff;
@@ -70,28 +71,27 @@
 /* Cores */
 /* Fontes */
 /* Tamanhos */
-#register-menu .title, #edit-menu .title, #delete-menu .title, #list-menu .title, #today-menu .title {
+#register-menu .title, #edit-menu .title, #modify-menu .title, #list-menu .title, #today-menu .title {
   text-align: center;
   font-size: 23px;
   color: #32A041;
 }
 
-#register-menu, #edit-menu, #delete-menu, #list-menu, #today-menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+#register-menu, #edit-menu, #modify-menu, #list-menu, #today-menu, #situation-project {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
   margin: 0px 4vw 3vw 4vw;
   padding: 0px 2.5vw 2vw 2.5vw;
   background-color: #FFFFFF;
   border-radius: 7px;
-  overflow-y: auto;
+  overflow-y: scroll;
+  max-height: 70vh;
+  margin-bottom: 0px;
 }
 
-#register-menu .informationFind, #edit-menu .informationFind, #delete-menu .informationFind, #list-menu .informationFind {
+#register-menu .informationFind, #edit-menu .informationFind, #modify-menu .informationFind, #list-menu .informationFind {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -101,13 +101,13 @@
           flex-flow: row wrap;
 }
 
-#register-menu .informationFind input[type=text], #edit-menu .informationFind input[type=text], #delete-menu .informationFind input[type=text], #list-menu .informationFind input[type=text] {
+#register-menu .informationFind input[type=text], #edit-menu .informationFind input[type=text], #modify-menu .informationFind input[type=text], #list-menu .informationFind input[type=text] {
   -webkit-box-flex: 10;
       -ms-flex-positive: 10;
           flex-grow: 10;
 }
 
-#register-menu .informationFind input[type=button], #edit-menu .informationFind input[type=button], #delete-menu .informationFind input[type=button], #list-menu .informationFind input[type=button] {
+#register-menu .informationFind input[type=button], #edit-menu .informationFind input[type=button], #modify-menu .informationFind input[type=button], #list-menu .informationFind input[type=button] {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -116,7 +116,7 @@
   padding: 0px !important;
 }
 
-#today-menu hr, #delete-menu hr, #list-menu hr {
+#today-menu hr, #modify-menu hr, #list-menu hr {
   border: none;
   border-top: 2px dotted #555;
   color: #fff;
@@ -127,12 +127,32 @@
 }
 
 #today-menu {
+  display: none;
   font-size: 18px;
 }
 
 #today-menu .date {
   text-align: center;
   font-size: 18px;
+}
+
+#today-menu .alert-menu {
+  text-align: center;
+  margin-top: 40px;
+}
+
+#today-menu .alert-menu .btn {
+  border: #32A041;
+  color: #FFFFFF !important;
+  background-color: #32A041 !important;
+  cursor: pointer;
+  margin-top: 0px !important;
+  min-width: 279px;
+}
+
+#today-menu .alert-menu .btn:hover {
+  -webkit-box-shadow: 0 0 1em #32A041;
+          box-shadow: 0 0 1em #32A041;
 }
 
 #register-menu {
@@ -181,15 +201,15 @@
           box-shadow: 0 0 1em #C8191E;
 }
 
-#delete-menu {
+#modify-menu {
   display: none;
   font-size: 18px;
-  overflow-y: scroll;
+  overflow-y: auto;
   max-height: 70vh;
   margin-bottom: 0px;
 }
 
-#delete-menu #cards {
+#modify-menu #cards {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -204,7 +224,7 @@
           justify-content: space-between;
 }
 
-#delete-menu #cards .card {
+#modify-menu #cards .card {
   min-width: 29vw;
   max-width: 31vw;
   margin: 0px 40px 20px 0px;
@@ -213,12 +233,12 @@
           box-shadow: 0 0px 1.5px 0 #32A041;
 }
 
-#delete-menu #cards .card .title-card {
+#modify-menu #cards .card .title-card {
   font-size: 18px;
   color: #32A041;
 }
 
-#delete-menu #cards .card .submits {
+#modify-menu #cards .card .submits {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -231,11 +251,11 @@
           justify-content: center;
 }
 
-#delete-menu #cards .card .submits input[type="button"] {
+#modify-menu #cards .card .submits input[type="button"] {
   padding: 11px 4vw;
 }
 
-#delete-menu #cards .card .submits #button-edit {
+#modify-menu #cards .card .submits #button-edit {
   border: #32A041;
   color: #FFFFFF !important;
   background-color: #32A041 !important;
@@ -243,24 +263,24 @@
   margin-right: 20px;
 }
 
-#delete-menu #cards .card .submits #button-edit:hover {
+#modify-menu #cards .card .submits #button-edit:hover {
   -webkit-box-shadow: 0 0 1em #32A041;
           box-shadow: 0 0 1em #32A041;
 }
 
-#delete-menu #cards .card .submits #button-cancel {
+#modify-menu #cards .card .submits #button-cancel {
   border: #C8191E;
   color: #FFFFFF !important;
   background-color: #C8191E !important;
   cursor: pointer;
 }
 
-#delete-menu #cards .card .submits #button-cancel:hover {
+#modify-menu #cards .card .submits #button-cancel:hover {
   -webkit-box-shadow: 0 0 1em #C8191E;
           box-shadow: 0 0 1em #C8191E;
 }
 
-#delete-menu .date {
+#modify-menu .date {
   text-align: center;
   font-size: 18px;
 }
@@ -268,14 +288,95 @@
 #list-menu {
   display: none;
   font-size: 18px;
-  overflow-y: scroll;
-  max-height: 70vh;
-  margin-bottom: 0px;
 }
 
 #list-menu .date {
   text-align: center;
   font-size: 18px;
+}
+
+/* Scroll dentro do rightbar */
+:-webkit-scrollbar-track {
+  background-color: #E8E9E9;
+  border-radius: 3px;
+}
+
+:-webkit-scrollbar {
+  width: 7px;
+  background: white;
+}
+
+:-webkit-scrollbar-thumb {
+  background: #32A041;
+  border-radius: 3px;
+}
+
+/* Cores */
+/* Fontes */
+/* Tamanhos */
+/* Cores */
+/* Fontes */
+/* Tamanhos */
+#register-menu .title, #edit-menu .title, #modify-menu .title, #list-menu .title, #today-menu .title {
+  text-align: center;
+  font-size: 23px;
+  color: #32A041;
+}
+
+#register-menu, #edit-menu, #modify-menu, #list-menu, #today-menu, #situation-project {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  margin: 0px 4vw 3vw 4vw;
+  padding: 0px 2.5vw 2vw 2.5vw;
+  background-color: #FFFFFF;
+  border-radius: 7px;
+  overflow-y: scroll;
+  max-height: 70vh;
+  margin-bottom: 0px;
+}
+
+#register-menu .informationFind, #edit-menu .informationFind, #modify-menu .informationFind, #list-menu .informationFind {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+#register-menu .informationFind input[type=text], #edit-menu .informationFind input[type=text], #modify-menu .informationFind input[type=text], #list-menu .informationFind input[type=text] {
+  -webkit-box-flex: 10;
+      -ms-flex-positive: 10;
+          flex-grow: 10;
+}
+
+#register-menu .informationFind input[type=button], #edit-menu .informationFind input[type=button], #modify-menu .informationFind input[type=button], #list-menu .informationFind input[type=button] {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin: 0px 0px 0px 8px !important;
+  height: 43px;
+  padding: 0px !important;
+}
+
+#today-menu hr, #modify-menu hr, #list-menu hr {
+  border: none;
+  border-top: 2px dotted #555;
+  color: #fff;
+  background-color: #fff;
+  height: 1px;
+  width: 100%;
+  margin: 0px;
+}
+
+#situation-project {
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 70vh;
+  margin-bottom: 0px;
 }
 
 body {
@@ -372,6 +473,7 @@ body {
   overflow: hidden;
   background-color: #E5E5E5;
   max-height: 92vh;
+  overflow-y: auto;
 }
 
 #grid > main #buttons {
@@ -396,6 +498,8 @@ body {
   font-size: 18px;
   font-weight: 400;
   color: #555;
+  min-width: 180px !important;
+  text-align: center;
 }
 
 #grid > main #buttons .btn:hover {
@@ -436,7 +540,7 @@ body {
 }
 
 #grid > main .chose-button input[type=text], #grid > main .chose-button input[type=date] {
-  height: 30px;
+  min-height: 30px;
 }
 
 #grid > main .chose-button input[type=button] {
