@@ -2,15 +2,15 @@
 @import '_extends';
 @import '_mixins';
 
+@import 'index';
 @import '_cardapio';
 @import '_projetos';
+@import '_estacionamento';
 
 body {
     background-color: $green-color;
     margin: 0;
 }
-
-// 1253 x 
 
 #grid {
     overflow-y: hidden;

@@ -1,10 +1,17 @@
 @import '_variables';
 @import '_mixins';
 
-%title {
-    text-align: center;
-    font-size: $large-font;
-    color: $green-thirdy-color;
+%model-form {
+    @extend %standard-column-content;
+
+    .title {
+        @extend %title;
+    }
+
+    .informationFind {
+        @extend %input-find;
+    }
+
 }
 
 %standard-column-content {
@@ -16,6 +23,13 @@
     overflow-y: scroll;
     max-height: 70vh;
     margin-bottom: 0px;
+}
+
+%title {
+    text-align: center;
+    font-size: $large-font;
+    color: $green-thirdy-color;
+    margin: 37px 0px;
 }
 
 %input-find {
@@ -34,17 +48,47 @@
     }
 }
 
-%model-form {
-    @extend %standard-column-content;
+%cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
-    .title {
-        @extend %title;
+    .card {
+        min-width: 27vw;
+        max-width: 31vw;
+        margin: 0px 20px 20px 20px;
+        padding: 0 0 0 20px;
+        border-radius: 7px;
+        border: 2px solid  $green-thirdy-color;
+
+        .title-card {
+            text-align: center;
+            font-size: $normal-font;
+            color: $green-thirdy-color;
+        }
+
+        .submits {
+            display: flex;
+            flex: 1;
+            padding: 0 20px 0 0;
+            justify-content: space-between;
+
+            input[type="button"] {
+                padding: 11px 4vw;
+                flex: 1;
+            }
+
+            #button-edit {
+                @include button-background-color-on($green-thirdy-color, $white-color);
+                margin-right: 5px;
+            }
+
+            #button-cancel {
+                @include button-background-color-on($red-color, $white-color);
+            }
+        }
     }
-
-    .informationFind {
-        @extend %input-find;
-    }
-
 }
 
 %dotted-line {

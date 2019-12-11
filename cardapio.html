@@ -40,9 +40,10 @@
             <!-- botões de escolha -->
             <div id="buttons">
                 <div id="menu-day" class="btn btn-selected" onclick="menuDay()">Cardápio do dia</div>
+                <div id="list" class="btn" onclick="showList()">Todos os cardápios</div>
                 <div id="register" class="btn" onclick="showRegister()">Cadastrar cardápio</div>
                 <div id="delete" class="btn" onclick="showModify()">Modificar cardápio</div>
-                <div id="list" class="btn" onclick="showList()">Todos os cardápios</div>
+
             </div>
             <!-- end botões de escolha -->
 
@@ -55,7 +56,7 @@
 
                 <!-- cadastro do cardápio -->
                 <div id="register-menu">
-                    <p class="title">Cadastrar almoço</p>
+                    <p class="title">Cadastrar cardápio</p>
                     <label>Data do almoço *</label>
                     <input type="date" id="inputDate" autocomplete="on">
 
@@ -94,13 +95,15 @@
 
                 <!-- modificar cardápio -->
                 <div id="modify-menu">
-                    <p class="title">Cardápios</p>
+                    <p class="title">Cardápios para modificar</p>
                     <div id="cards"></div>
                 </div>
                 <!-- end modificar cardápio -->
 
                 <!-- listar cardápio -->
                 <div id="list-menu">
+                    <p class="title">Todos os cardápios</p>
+                    <div id="cards-list"></div>
                 </div>
                 <!-- end listar cardápio -->
             </div>
@@ -124,7 +127,7 @@
     <script src="js/cardapio/cdp-delete-menu.js"></script>
     <script src="js/cardapio/cdp-edit-menu.js"></script>
     <script src="js/cardapio/cdp-list-menu.js"></script>
-    
+
 
 </body>
 

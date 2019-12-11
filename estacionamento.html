@@ -29,15 +29,35 @@
                 <a href="index.html">Dashboard</a>
                 <a href="cardapio.html">Cardápio</a>
                 <a href="projetos.html">Projetos</a>
-                <a href="estacionamento.html"  class="selected">Estacionamento</a>
+                <a href="estacionamento.html" class="selected">Estacionamento</a>
             </div>
         </nav>
         <!-- end sidebar -->
 
         <!-- conteudo -->
         <main>
+            <!-- botões de escolha -->
+            <div id="buttons">
+                <div id="list-slots" class="btn" onclick="listSlots()">Todas as vagas</div>
+                <div id="consult-situation" class="btn" onclick="situation()">Consultar vaga específica
+                </div>
+            </div>
+            <!-- end botões de escolha -->
 
-           
+            <div class="chose-button">
+
+                <div id="list-slots">
+                    <p class="title">Vagas</p>
+                    <div id="cards-slots">
+                    </div>
+                </div>
+
+                <div id="situation-slot">
+                </div>
+
+            </div>
+
+
         </main>
         <!-- conteudo -->
 
@@ -45,7 +65,10 @@
 
     <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.0/build/alertify.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="js/estacionamento.js"></script>
+
+    <script src="js/estacionamento/etcm-config.js"></script>
+    <script src="js/estacionamento/etcm-btn-routes.js"></script>
+    <script src="js/estacionamento/etcm-list-slots.js"></script>
 
 </body>
 

@@ -1,0 +1,18 @@
+@import '_variables';
+@import '_extends';
+
+.alert {
+    border-radius: 7px;
+    background-color: $white-color;
+    padding: 10px;
+    margin: 20px;
+    text-align: center;
+
+    .title {
+        text-transform: uppercase;
+        font-size: $large-font;
+        color: $red-color;
+    }
+}
+
+    

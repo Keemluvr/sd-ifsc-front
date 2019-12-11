@@ -10,6 +10,7 @@
     .date {
         text-align: center;
         font-size: $normal-font;
+        margin-bottom: 0px;
     }
 
     .title {
@@ -31,7 +32,6 @@
 #register-menu {
     display: none;
     @extend %model-form;
-    
 }
 
 #edit-menu {
@@ -71,43 +71,7 @@
     margin-bottom: 0px;
 
     #cards {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-
-        .card {
-            min-width: 29vw;
-            max-width: 31vw;
-            margin: 0px 40px 20px 0px;
-            padding: 0 0 0 20px;
-            box-shadow: 0 0px 1.5px 0 $green-thirdy-color;
-
-            .title-card {
-                font-size: $normal-font;
-                color: $green-thirdy-color;
-            }
-
-            .submits {
-                display: flex;
-                flex: 1;
-                padding: 0 20px 0 0;
-                justify-content: center;
-
-                input[type="button"] {
-                    padding: 11px 4vw;
-                }
-
-                #button-edit {
-                    @include button-background-color-on($green-thirdy-color, $white-color);
-                    margin-right: 20px;
-                }
-
-                #button-cancel {
-                    @include button-background-color-on($red-color, $white-color);
-                }
-            }
-        }
+        @extend %cards;
     }
 
     .date {
@@ -120,28 +84,15 @@
 #list-menu {
     display: none;
     @extend %model-form;
-    @extend %dotted-line;
     font-size: $normal-font;
+
+    #cards-list {
+        @extend %cards;
+    }
 
     .date {
         text-align: center;
         font-size: $normal-font;
     }
 
-}
-
-/* Scroll dentro do rightbar */
-:-webkit-scrollbar-track {
-    background-color: #E8E9E9;
-    border-radius: 3px;
-}
-
-:-webkit-scrollbar {
-    width: 7px;
-    background: white;
-}
-
-:-webkit-scrollbar-thumb {
-    background: $green-thirdy-color;
-    border-radius: 3px;
 }

@@ -39,16 +39,27 @@
 
             <!-- botões de escolha -->
             <div id="buttons">
-                <div id="situation" class="btn" onclick="showSituation()">Situação dos projetos</div>
-                <div id="consult-situation" class="btn" onclick="showConsultSituation()">Consultar situação do projeto</div>
+                <div id="all-projects" class="btn" onclick="showProjects()">Todos os projetos</div>
+                <div id="situation" class="btn" onclick="">Situação dos projetos</div>
+                <div id="consult-situation" class="btn" onclick="situation()">Consultar situação do projeto
+                </div>
             </div>
             <!-- end botões de escolha -->
 
             <div class="chose-button">
 
+                <div id="projects">
+                    <p class="title">Projetos</p>
+                    <div id="cards-project">
+                    </div>
+                </div>
+
+                <div id="situation">
+                </div>
+
                 <div id="situation-project">
                 </div>
-                
+
             </div>
 
         </main>
@@ -58,7 +69,11 @@
 
     <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.0/build/alertify.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="js/projetos.js"></script>
+
+    <script src="js/projetos/pj-config.js"></script>
+    <script src="js/projetos/pj-btn-routes.js"></script>
+    <script src="js/projetos//pj-list-projects.js"></script>
+    <script src="js/projetos/pj-situation-project.js"></script>
 
 </body>
 

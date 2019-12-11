@@ -1,0 +1,41 @@
+@import '_variables';
+@import '_extends';
+
+#list-slots {
+    @extend %standard-column-content;
+    @extend %model-form;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 70vh;
+    margin-bottom: 0px;
+
+    #cards-slots {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: center;
+
+        .card-slot {
+            border: 2px solid $green-thirdy-color;
+            padding: 20px;
+            border-radius: 7px;
+            margin: 0px 20px;
+            margin-bottom: 30px;
+            min-width: 212px;
+
+            .icon-slot {
+                max-height: 40px;
+                width: auto;
+
+                .available {
+                    fill: $green-thirdy-color;
+                }
+
+                .occupy {
+                    fill: $red-color;
+                }
+            }
+
+        }
+    }
+}

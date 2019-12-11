@@ -1,20 +1,11 @@
-// Variáveis globais
-const APIESTACIONAMENTO = axios.create({
-    baseURL: 'https://projetos-pesquisa-api.herokuapp.com/api/',
-    headers: {
-        'X-Custom-Header': 'foobar'
-    }
-});
-
 // ****************************************************************************************************************************
-// *************************************************** Todos os projetos de pesquisa ******************************************
+// *************************************************** Projetos de pesquisa por situação **************************************
 // ****************************************************************************************************************************
-function showSituation() {
+function situation() {
+    showSituation()
     APIESTACIONAMENTO.get(`/dashBoard/`)
         .then(function (response) {
             // Sucesso
-            console.log(response.data)
-
             document.getElementById('situation-project').innerHTML += `
                 <p>Projetos com o cadastro em andamento</p>
                 <p>${response.data.Data.QuantidadePorSituacao[0].Quantidade}</p>
@@ -61,14 +52,14 @@ function showSituation() {
         })
         .catch(function (error) {
             // Erro
-            alertify.warning('Erro');
+            alertify.warning('Erro ao retornar a quantidade de projetos de pesquisa por situação!');
         });
 }
 
-APIESTACIONAMENTO.post('/projetosSituacao/2')
+APIPROJETOS.post('/projetosSituacao/2')
     .then(function (response) {
         //console.log(response.data)
     })
     .catch(function (error) {
-        alertify.error('Erro!');
+        //alertify.error('Erro!');
     });

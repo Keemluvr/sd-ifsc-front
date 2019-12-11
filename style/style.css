@@ -10,13 +10,11 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
-#register-menu .title, #edit-menu .title, #modify-menu .title, #list-menu .title, #today-menu .title {
-  text-align: center;
-  font-size: 23px;
-  color: #32A041;
-}
-
-#register-menu, #edit-menu, #modify-menu, #list-menu, #today-menu, #situation-project {
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+#register-menu, #edit-menu, #modify-menu, #list-menu, #projects, #list-slots, #today-menu, #situation-project {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
@@ -30,7 +28,14 @@
   margin-bottom: 0px;
 }
 
-#register-menu .informationFind, #edit-menu .informationFind, #modify-menu .informationFind, #list-menu .informationFind {
+#register-menu .title, #edit-menu .title, #modify-menu .title, #list-menu .title, #projects .title, #list-slots .title, #today-menu .title {
+  text-align: center;
+  font-size: 23px;
+  color: #32A041;
+  margin: 37px 0px;
+}
+
+#register-menu .informationFind, #edit-menu .informationFind, #modify-menu .informationFind, #list-menu .informationFind, #projects .informationFind, #list-slots .informationFind {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -40,13 +45,13 @@
           flex-flow: row wrap;
 }
 
-#register-menu .informationFind input[type=text], #edit-menu .informationFind input[type=text], #modify-menu .informationFind input[type=text], #list-menu .informationFind input[type=text] {
+#register-menu .informationFind input[type=text], #edit-menu .informationFind input[type=text], #modify-menu .informationFind input[type=text], #list-menu .informationFind input[type=text], #projects .informationFind input[type=text], #list-slots .informationFind input[type=text] {
   -webkit-box-flex: 10;
       -ms-flex-positive: 10;
           flex-grow: 10;
 }
 
-#register-menu .informationFind input[type=button], #edit-menu .informationFind input[type=button], #modify-menu .informationFind input[type=button], #list-menu .informationFind input[type=button] {
+#register-menu .informationFind input[type=button], #edit-menu .informationFind input[type=button], #modify-menu .informationFind input[type=button], #list-menu .informationFind input[type=button], #projects .informationFind input[type=button], #list-slots .informationFind input[type=button] {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -55,7 +60,82 @@
   padding: 0px !important;
 }
 
-#today-menu hr, #modify-menu hr, #list-menu hr {
+#modify-menu #cards, #list-menu #cards-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#modify-menu #cards .card, #list-menu #cards-list .card {
+  min-width: 27vw;
+  max-width: 31vw;
+  margin: 0px 20px 20px 20px;
+  padding: 0 0 0 20px;
+  border-radius: 7px;
+  border: 2px solid #32A041;
+}
+
+#modify-menu #cards .card .title-card, #list-menu #cards-list .card .title-card {
+  text-align: center;
+  font-size: 18px;
+  color: #32A041;
+}
+
+#modify-menu #cards .card .submits, #list-menu #cards-list .card .submits {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0 20px 0 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#modify-menu #cards .card .submits input[type="button"], #list-menu #cards-list .card .submits input[type="button"] {
+  padding: 11px 4vw;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+#modify-menu #cards .card .submits #button-edit, #list-menu #cards-list .card .submits #button-edit {
+  border: #32A041;
+  color: #FFFFFF !important;
+  background-color: #32A041 !important;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+#modify-menu #cards .card .submits #button-edit:hover, #list-menu #cards-list .card .submits #button-edit:hover {
+  -webkit-box-shadow: 0 0 1em #32A041;
+          box-shadow: 0 0 1em #32A041;
+}
+
+#modify-menu #cards .card .submits #button-cancel, #list-menu #cards-list .card .submits #button-cancel {
+  border: #C8191E;
+  color: #FFFFFF !important;
+  background-color: #C8191E !important;
+  cursor: pointer;
+}
+
+#modify-menu #cards .card .submits #button-cancel:hover, #list-menu #cards-list .card .submits #button-cancel:hover {
+  -webkit-box-shadow: 0 0 1em #C8191E;
+          box-shadow: 0 0 1em #C8191E;
+}
+
+#today-menu hr, #modify-menu hr {
   border: none;
   border-top: 2px dotted #555;
   color: #fff;
@@ -71,13 +151,7 @@
 /* Cores */
 /* Fontes */
 /* Tamanhos */
-#register-menu .title, #edit-menu .title, #modify-menu .title, #list-menu .title, #today-menu .title {
-  text-align: center;
-  font-size: 23px;
-  color: #32A041;
-}
-
-#register-menu, #edit-menu, #modify-menu, #list-menu, #today-menu, #situation-project {
+#register-menu, #edit-menu, #modify-menu, #list-menu, #projects, #list-slots, #today-menu, #situation-project {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
@@ -91,7 +165,14 @@
   margin-bottom: 0px;
 }
 
-#register-menu .informationFind, #edit-menu .informationFind, #modify-menu .informationFind, #list-menu .informationFind {
+#register-menu .title, #edit-menu .title, #modify-menu .title, #list-menu .title, #projects .title, #list-slots .title, #today-menu .title {
+  text-align: center;
+  font-size: 23px;
+  color: #32A041;
+  margin: 37px 0px;
+}
+
+#register-menu .informationFind, #edit-menu .informationFind, #modify-menu .informationFind, #list-menu .informationFind, #projects .informationFind, #list-slots .informationFind {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -101,13 +182,13 @@
           flex-flow: row wrap;
 }
 
-#register-menu .informationFind input[type=text], #edit-menu .informationFind input[type=text], #modify-menu .informationFind input[type=text], #list-menu .informationFind input[type=text] {
+#register-menu .informationFind input[type=text], #edit-menu .informationFind input[type=text], #modify-menu .informationFind input[type=text], #list-menu .informationFind input[type=text], #projects .informationFind input[type=text], #list-slots .informationFind input[type=text] {
   -webkit-box-flex: 10;
       -ms-flex-positive: 10;
           flex-grow: 10;
 }
 
-#register-menu .informationFind input[type=button], #edit-menu .informationFind input[type=button], #modify-menu .informationFind input[type=button], #list-menu .informationFind input[type=button] {
+#register-menu .informationFind input[type=button], #edit-menu .informationFind input[type=button], #modify-menu .informationFind input[type=button], #list-menu .informationFind input[type=button], #projects .informationFind input[type=button], #list-slots .informationFind input[type=button] {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -116,7 +197,233 @@
   padding: 0px !important;
 }
 
-#today-menu hr, #modify-menu hr, #list-menu hr {
+#modify-menu #cards, #list-menu #cards-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#modify-menu #cards .card, #list-menu #cards-list .card {
+  min-width: 27vw;
+  max-width: 31vw;
+  margin: 0px 20px 20px 20px;
+  padding: 0 0 0 20px;
+  border-radius: 7px;
+  border: 2px solid #32A041;
+}
+
+#modify-menu #cards .card .title-card, #list-menu #cards-list .card .title-card {
+  text-align: center;
+  font-size: 18px;
+  color: #32A041;
+}
+
+#modify-menu #cards .card .submits, #list-menu #cards-list .card .submits {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0 20px 0 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#modify-menu #cards .card .submits input[type="button"], #list-menu #cards-list .card .submits input[type="button"] {
+  padding: 11px 4vw;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+#modify-menu #cards .card .submits #button-edit, #list-menu #cards-list .card .submits #button-edit {
+  border: #32A041;
+  color: #FFFFFF !important;
+  background-color: #32A041 !important;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+#modify-menu #cards .card .submits #button-edit:hover, #list-menu #cards-list .card .submits #button-edit:hover {
+  -webkit-box-shadow: 0 0 1em #32A041;
+          box-shadow: 0 0 1em #32A041;
+}
+
+#modify-menu #cards .card .submits #button-cancel, #list-menu #cards-list .card .submits #button-cancel {
+  border: #C8191E;
+  color: #FFFFFF !important;
+  background-color: #C8191E !important;
+  cursor: pointer;
+}
+
+#modify-menu #cards .card .submits #button-cancel:hover, #list-menu #cards-list .card .submits #button-cancel:hover {
+  -webkit-box-shadow: 0 0 1em #C8191E;
+          box-shadow: 0 0 1em #C8191E;
+}
+
+#today-menu hr, #modify-menu hr {
+  border: none;
+  border-top: 2px dotted #555;
+  color: #fff;
+  background-color: #fff;
+  height: 1px;
+  width: 100%;
+  margin: 0px;
+}
+
+.alert {
+  border-radius: 7px;
+  background-color: #FFFFFF;
+  padding: 10px;
+  margin: 20px;
+  text-align: center;
+}
+
+.alert .title {
+  text-transform: uppercase;
+  font-size: 23px;
+  color: #C8191E;
+}
+
+/* Cores */
+/* Fontes */
+/* Tamanhos */
+/* Cores */
+/* Fontes */
+/* Tamanhos */
+#register-menu, #edit-menu, #modify-menu, #list-menu, #projects, #list-slots, #today-menu, #situation-project {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  margin: 0px 4vw 3vw 4vw;
+  padding: 0px 2.5vw 2vw 2.5vw;
+  background-color: #FFFFFF;
+  border-radius: 7px;
+  overflow-y: scroll;
+  max-height: 70vh;
+  margin-bottom: 0px;
+}
+
+#register-menu .title, #edit-menu .title, #modify-menu .title, #list-menu .title, #projects .title, #list-slots .title, #today-menu .title {
+  text-align: center;
+  font-size: 23px;
+  color: #32A041;
+  margin: 37px 0px;
+}
+
+#register-menu .informationFind, #edit-menu .informationFind, #modify-menu .informationFind, #list-menu .informationFind, #projects .informationFind, #list-slots .informationFind {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+#register-menu .informationFind input[type=text], #edit-menu .informationFind input[type=text], #modify-menu .informationFind input[type=text], #list-menu .informationFind input[type=text], #projects .informationFind input[type=text], #list-slots .informationFind input[type=text] {
+  -webkit-box-flex: 10;
+      -ms-flex-positive: 10;
+          flex-grow: 10;
+}
+
+#register-menu .informationFind input[type=button], #edit-menu .informationFind input[type=button], #modify-menu .informationFind input[type=button], #list-menu .informationFind input[type=button], #projects .informationFind input[type=button], #list-slots .informationFind input[type=button] {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin: 0px 0px 0px 8px !important;
+  height: 43px;
+  padding: 0px !important;
+}
+
+#modify-menu #cards, #list-menu #cards-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#modify-menu #cards .card, #list-menu #cards-list .card {
+  min-width: 27vw;
+  max-width: 31vw;
+  margin: 0px 20px 20px 20px;
+  padding: 0 0 0 20px;
+  border-radius: 7px;
+  border: 2px solid #32A041;
+}
+
+#modify-menu #cards .card .title-card, #list-menu #cards-list .card .title-card {
+  text-align: center;
+  font-size: 18px;
+  color: #32A041;
+}
+
+#modify-menu #cards .card .submits, #list-menu #cards-list .card .submits {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0 20px 0 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#modify-menu #cards .card .submits input[type="button"], #list-menu #cards-list .card .submits input[type="button"] {
+  padding: 11px 4vw;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+#modify-menu #cards .card .submits #button-edit, #list-menu #cards-list .card .submits #button-edit {
+  border: #32A041;
+  color: #FFFFFF !important;
+  background-color: #32A041 !important;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+#modify-menu #cards .card .submits #button-edit:hover, #list-menu #cards-list .card .submits #button-edit:hover {
+  -webkit-box-shadow: 0 0 1em #32A041;
+          box-shadow: 0 0 1em #32A041;
+}
+
+#modify-menu #cards .card .submits #button-cancel, #list-menu #cards-list .card .submits #button-cancel {
+  border: #C8191E;
+  color: #FFFFFF !important;
+  background-color: #C8191E !important;
+  cursor: pointer;
+}
+
+#modify-menu #cards .card .submits #button-cancel:hover, #list-menu #cards-list .card .submits #button-cancel:hover {
+  -webkit-box-shadow: 0 0 1em #C8191E;
+          box-shadow: 0 0 1em #C8191E;
+}
+
+#today-menu hr, #modify-menu hr {
   border: none;
   border-top: 2px dotted #555;
   color: #fff;
@@ -134,6 +441,7 @@
 #today-menu .date {
   text-align: center;
   font-size: 18px;
+  margin-bottom: 0px;
 }
 
 #today-menu .alert-menu {
@@ -209,77 +517,6 @@
   margin-bottom: 0px;
 }
 
-#modify-menu #cards {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-#modify-menu #cards .card {
-  min-width: 29vw;
-  max-width: 31vw;
-  margin: 0px 40px 20px 0px;
-  padding: 0 0 0 20px;
-  -webkit-box-shadow: 0 0px 1.5px 0 #32A041;
-          box-shadow: 0 0px 1.5px 0 #32A041;
-}
-
-#modify-menu #cards .card .title-card {
-  font-size: 18px;
-  color: #32A041;
-}
-
-#modify-menu #cards .card .submits {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  padding: 0 20px 0 0;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-#modify-menu #cards .card .submits input[type="button"] {
-  padding: 11px 4vw;
-}
-
-#modify-menu #cards .card .submits #button-edit {
-  border: #32A041;
-  color: #FFFFFF !important;
-  background-color: #32A041 !important;
-  cursor: pointer;
-  margin-right: 20px;
-}
-
-#modify-menu #cards .card .submits #button-edit:hover {
-  -webkit-box-shadow: 0 0 1em #32A041;
-          box-shadow: 0 0 1em #32A041;
-}
-
-#modify-menu #cards .card .submits #button-cancel {
-  border: #C8191E;
-  color: #FFFFFF !important;
-  background-color: #C8191E !important;
-  cursor: pointer;
-}
-
-#modify-menu #cards .card .submits #button-cancel:hover {
-  -webkit-box-shadow: 0 0 1em #C8191E;
-          box-shadow: 0 0 1em #C8191E;
-}
-
 #modify-menu .date {
   text-align: center;
   font-size: 18px;
@@ -295,35 +532,13 @@
   font-size: 18px;
 }
 
-/* Scroll dentro do rightbar */
-:-webkit-scrollbar-track {
-  background-color: #E8E9E9;
-  border-radius: 3px;
-}
-
-:-webkit-scrollbar {
-  width: 7px;
-  background: white;
-}
-
-:-webkit-scrollbar-thumb {
-  background: #32A041;
-  border-radius: 3px;
-}
-
 /* Cores */
 /* Fontes */
 /* Tamanhos */
 /* Cores */
 /* Fontes */
 /* Tamanhos */
-#register-menu .title, #edit-menu .title, #modify-menu .title, #list-menu .title, #today-menu .title {
-  text-align: center;
-  font-size: 23px;
-  color: #32A041;
-}
-
-#register-menu, #edit-menu, #modify-menu, #list-menu, #today-menu, #situation-project {
+#register-menu, #edit-menu, #modify-menu, #list-menu, #projects, #list-slots, #today-menu, #situation-project {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
@@ -337,7 +552,14 @@
   margin-bottom: 0px;
 }
 
-#register-menu .informationFind, #edit-menu .informationFind, #modify-menu .informationFind, #list-menu .informationFind {
+#register-menu .title, #edit-menu .title, #modify-menu .title, #list-menu .title, #projects .title, #list-slots .title, #today-menu .title {
+  text-align: center;
+  font-size: 23px;
+  color: #32A041;
+  margin: 37px 0px;
+}
+
+#register-menu .informationFind, #edit-menu .informationFind, #modify-menu .informationFind, #list-menu .informationFind, #projects .informationFind, #list-slots .informationFind {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -347,13 +569,13 @@
           flex-flow: row wrap;
 }
 
-#register-menu .informationFind input[type=text], #edit-menu .informationFind input[type=text], #modify-menu .informationFind input[type=text], #list-menu .informationFind input[type=text] {
+#register-menu .informationFind input[type=text], #edit-menu .informationFind input[type=text], #modify-menu .informationFind input[type=text], #list-menu .informationFind input[type=text], #projects .informationFind input[type=text], #list-slots .informationFind input[type=text] {
   -webkit-box-flex: 10;
       -ms-flex-positive: 10;
           flex-grow: 10;
 }
 
-#register-menu .informationFind input[type=button], #edit-menu .informationFind input[type=button], #modify-menu .informationFind input[type=button], #list-menu .informationFind input[type=button] {
+#register-menu .informationFind input[type=button], #edit-menu .informationFind input[type=button], #modify-menu .informationFind input[type=button], #list-menu .informationFind input[type=button], #projects .informationFind input[type=button], #list-slots .informationFind input[type=button] {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -362,7 +584,82 @@
   padding: 0px !important;
 }
 
-#today-menu hr, #modify-menu hr, #list-menu hr {
+#modify-menu #cards, #list-menu #cards-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#modify-menu #cards .card, #list-menu #cards-list .card {
+  min-width: 27vw;
+  max-width: 31vw;
+  margin: 0px 20px 20px 20px;
+  padding: 0 0 0 20px;
+  border-radius: 7px;
+  border: 2px solid #32A041;
+}
+
+#modify-menu #cards .card .title-card, #list-menu #cards-list .card .title-card {
+  text-align: center;
+  font-size: 18px;
+  color: #32A041;
+}
+
+#modify-menu #cards .card .submits, #list-menu #cards-list .card .submits {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0 20px 0 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#modify-menu #cards .card .submits input[type="button"], #list-menu #cards-list .card .submits input[type="button"] {
+  padding: 11px 4vw;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+#modify-menu #cards .card .submits #button-edit, #list-menu #cards-list .card .submits #button-edit {
+  border: #32A041;
+  color: #FFFFFF !important;
+  background-color: #32A041 !important;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+#modify-menu #cards .card .submits #button-edit:hover, #list-menu #cards-list .card .submits #button-edit:hover {
+  -webkit-box-shadow: 0 0 1em #32A041;
+          box-shadow: 0 0 1em #32A041;
+}
+
+#modify-menu #cards .card .submits #button-cancel, #list-menu #cards-list .card .submits #button-cancel {
+  border: #C8191E;
+  color: #FFFFFF !important;
+  background-color: #C8191E !important;
+  cursor: pointer;
+}
+
+#modify-menu #cards .card .submits #button-cancel:hover, #list-menu #cards-list .card .submits #button-cancel:hover {
+  -webkit-box-shadow: 0 0 1em #C8191E;
+          box-shadow: 0 0 1em #C8191E;
+}
+
+#today-menu hr, #modify-menu hr {
   border: none;
   border-top: 2px dotted #555;
   color: #fff;
@@ -372,11 +669,230 @@
   margin: 0px;
 }
 
+#projects {
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 70vh;
+  margin-bottom: 0px;
+}
+
+#projects #cards-project .card-project {
+  border: 2px solid #32A041;
+  padding: 20px;
+  border-radius: 7px;
+  margin-bottom: 30px;
+}
+
+#projects #cards-project .card-project .head-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 18px;
+  color: #32A041;
+}
+
+#projects #cards-project .card-project .body-card .sit-icon {
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: #555;
+  margin: 1px 3px;
+  -webkit-box-shadow: 0 0 3em yellow;
+          box-shadow: 0 0 3em yellow;
+}
+
 #situation-project {
   overflow-y: auto;
   overflow-x: hidden;
   max-height: 70vh;
   margin-bottom: 0px;
+  display: none;
+}
+
+/* Cores */
+/* Fontes */
+/* Tamanhos */
+/* Cores */
+/* Fontes */
+/* Tamanhos */
+#register-menu, #edit-menu, #modify-menu, #list-menu, #projects, #list-slots, #today-menu, #situation-project {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  margin: 0px 4vw 3vw 4vw;
+  padding: 0px 2.5vw 2vw 2.5vw;
+  background-color: #FFFFFF;
+  border-radius: 7px;
+  overflow-y: scroll;
+  max-height: 70vh;
+  margin-bottom: 0px;
+}
+
+#register-menu .title, #edit-menu .title, #modify-menu .title, #list-menu .title, #projects .title, #list-slots .title, #today-menu .title {
+  text-align: center;
+  font-size: 23px;
+  color: #32A041;
+  margin: 37px 0px;
+}
+
+#register-menu .informationFind, #edit-menu .informationFind, #modify-menu .informationFind, #list-menu .informationFind, #projects .informationFind, #list-slots .informationFind {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+#register-menu .informationFind input[type=text], #edit-menu .informationFind input[type=text], #modify-menu .informationFind input[type=text], #list-menu .informationFind input[type=text], #projects .informationFind input[type=text], #list-slots .informationFind input[type=text] {
+  -webkit-box-flex: 10;
+      -ms-flex-positive: 10;
+          flex-grow: 10;
+}
+
+#register-menu .informationFind input[type=button], #edit-menu .informationFind input[type=button], #modify-menu .informationFind input[type=button], #list-menu .informationFind input[type=button], #projects .informationFind input[type=button], #list-slots .informationFind input[type=button] {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin: 0px 0px 0px 8px !important;
+  height: 43px;
+  padding: 0px !important;
+}
+
+#modify-menu #cards, #list-menu #cards-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#modify-menu #cards .card, #list-menu #cards-list .card {
+  min-width: 27vw;
+  max-width: 31vw;
+  margin: 0px 20px 20px 20px;
+  padding: 0 0 0 20px;
+  border-radius: 7px;
+  border: 2px solid #32A041;
+}
+
+#modify-menu #cards .card .title-card, #list-menu #cards-list .card .title-card {
+  text-align: center;
+  font-size: 18px;
+  color: #32A041;
+}
+
+#modify-menu #cards .card .submits, #list-menu #cards-list .card .submits {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0 20px 0 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#modify-menu #cards .card .submits input[type="button"], #list-menu #cards-list .card .submits input[type="button"] {
+  padding: 11px 4vw;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+#modify-menu #cards .card .submits #button-edit, #list-menu #cards-list .card .submits #button-edit {
+  border: #32A041;
+  color: #FFFFFF !important;
+  background-color: #32A041 !important;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+#modify-menu #cards .card .submits #button-edit:hover, #list-menu #cards-list .card .submits #button-edit:hover {
+  -webkit-box-shadow: 0 0 1em #32A041;
+          box-shadow: 0 0 1em #32A041;
+}
+
+#modify-menu #cards .card .submits #button-cancel, #list-menu #cards-list .card .submits #button-cancel {
+  border: #C8191E;
+  color: #FFFFFF !important;
+  background-color: #C8191E !important;
+  cursor: pointer;
+}
+
+#modify-menu #cards .card .submits #button-cancel:hover, #list-menu #cards-list .card .submits #button-cancel:hover {
+  -webkit-box-shadow: 0 0 1em #C8191E;
+          box-shadow: 0 0 1em #C8191E;
+}
+
+#today-menu hr, #modify-menu hr {
+  border: none;
+  border-top: 2px dotted #555;
+  color: #fff;
+  background-color: #fff;
+  height: 1px;
+  width: 100%;
+  margin: 0px;
+}
+
+#list-slots {
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 70vh;
+  margin-bottom: 0px;
+}
+
+#list-slots #cards-slots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#list-slots #cards-slots .card-slot {
+  border: 2px solid #32A041;
+  padding: 20px;
+  border-radius: 7px;
+  margin: 0px 20px;
+  margin-bottom: 30px;
+  min-width: 212px;
+}
+
+#list-slots #cards-slots .card-slot .icon-slot {
+  max-height: 40px;
+  width: auto;
+}
+
+#list-slots #cards-slots .card-slot .icon-slot .available {
+  fill: #32A041;
+}
+
+#list-slots #cards-slots .card-slot .icon-slot .occupy {
+  fill: #C8191E;
 }
 
 body {

@@ -1,10 +1,48 @@
 @import '_variables';
 @import '_extends';
 
+#projects {
+    @extend %standard-column-content;
+    @extend %model-form;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 70vh;
+    margin-bottom: 0px;
+
+    #cards-project {
+        .card-project {
+            border: 2px solid $green-thirdy-color;
+            padding: 20px;
+            border-radius: 7px;
+            margin-bottom: 30px;
+
+            .head-card {
+                display: flex;
+                justify-content: space-between;
+                font-size: $normal-font;
+                color: $green-thirdy-color;
+            }
+
+            .body-card {
+                .sit-icon {
+                    height: 8px;
+                    width: 8px;
+                    border-radius: 50%;
+                    display: inline-block;
+                    background-color: $gray-color;
+                    margin: 1px 3px;
+                    box-shadow: 0 0 3em yellow;
+                }
+            }
+        }
+    }
+}
+
 #situation-project {
     @extend %standard-column-content;
     overflow-y: auto;
     overflow-x: hidden;
     max-height: 70vh;
     margin-bottom: 0px;
+    display: none;
 }
